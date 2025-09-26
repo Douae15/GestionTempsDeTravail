@@ -1,0 +1,257 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+@white: #fff;
+@blue: #4b84fe;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  font-weight: 300;
+  color: #a7a1ae;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 4%;
+  padding: 1%;
+  color: #004aad;
+  font-weight: bold;
+}
+
+.title h3 {
+  font-size: 22px;
+  margin: 0 auto;
+  margin-top: -45%;
+  padding: 1%;
+  margin-left: 18%;
+  color: #091f68;
+  font-weight: bold;
+}
+
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+app-clock {
+  position: absolute;
+  top: 50%; /* Vous pouvez ajuster cette valeur selon votre besoin */
+  right: 50px; /* Ajustez cette valeur pour déplacer l'élément vers la droite */
+  transform: translate(0, -50%);
+}
+
+.animation-area {
+  background: linear-gradient(to left, #d0d2fb, #f3f3ff);
+  width: 100%;
+  height: 100vh;
+}
+.box-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.358);
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+  z-index: 0;
+}
+
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
+}
+.box-area li:nth-child(4) {
+  left: 42%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+.box-area li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+.box-area li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+.content-wrap {
+	grid-area: content;
+	padding: 3em;
+	overflow: auto;
+
+}
+
+
+	.info-boxes {
+		padding: 3em 0 2em;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		grid-gap: 2em;
+
+
+  }
+  .info-boxes .info-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff7f;
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  border-radius: 25px;
+  border: 2px solid #ffffff30;
+  box-shadow: 0 0 30px #0000002a;
+  margin-left: 150%;
+  width: 250px;
+  text-align: center;
+  align-items: center;
+  margin-top: -50px;
+  }
+    .info-boxes .box-icon svg
+				 {
+					display: block;
+					width: 48px;
+					height: 48px;
+         }
+          .info-boxes .box-icon	path,
+					circle {
+						fill: #0e2674d2;
+					}
+
+
+			.info-boxes .box-content {
+				padding-left: 1.25em;
+				white-space: nowrap;
+        color: #091f6877;
+      }
+      .info-boxes .box-content  .big {
+					display: block;
+					font-size: 2em;
+					line-height: 150%;
+					color: #1b253d;
+				}
+
+
+
+
+        .container {
+          position: absolute;
+          top: 70%;
+
+          transform: translate(-50%, -50%);
+        }
+
+        table {
+          margin-left: 80%;
+          width: 800px;
+          border-collapse: collapse;
+          overflow: hidden;
+          box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        th,
+        td {
+          padding: 15px;
+          background-color: rgba(255, 255, 255, 0.306);
+          color: #0e2674d2;
+        }
+
+        th {
+          text-align: left;
+        }
+
+        thead th {
+            background-color: #55608f;
+            color: #ffffff;
+          }
+
+
+        tbody tr:hover {
+              background-color: rgba(255,255,255,0.3);
+            }
+
+            tbody td {
+            position: relative;
+            }
+            tbody td:hover:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -9999px;
+                bottom: -9999px;
+                background-color: rgba(255,255,255,0.2);
+                z-index: -1;
+              }
+
+              button {
+
+                background-color: #091f68;
+              
+                color: white;
+              
+                border: none;
+              
+                padding: 10px 15px;
+              
+                border-radius: 5px;
+              
+                cursor: pointer;
+               
+              }
+              

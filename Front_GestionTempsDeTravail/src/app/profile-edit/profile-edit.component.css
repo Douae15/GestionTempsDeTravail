@@ -1,0 +1,215 @@
+body {
+
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+
+  padding: 0;
+
+
+
+}
+
+
+
+.form-container {
+
+
+  background-color: #e6e8f6;
+
+
+
+  border-radius: 5px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  border: 2px solid #004AAD;
+
+
+}
+
+
+
+
+
+h1 {
+
+  color: #004AAD;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+
+
+form {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+
+
+
+
+/* Styles des labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  width: 10%; /* Ajustez la largeur du label selon vos besoins */
+}
+
+/* Styles des champs d'entrée */
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #004AAD;
+  border-radius: 8px;
+  background-color: #edeff7;
+  width: 100%; /* Ajustez la largeur du champ d'entrée selon vos besoins */
+}
+
+
+
+button:hover {
+
+  font-weight: bold;
+
+}
+
+
+
+.form-group {
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+
+}
+
+
+
+.input-field {
+
+  flex: 1;
+
+}
+
+
+
+.close{
+
+  background-color: rgba(255, 0, 0, 0.803);
+
+  margin-left: 10px;
+
+}
+
+
+
+
+
+
+
+button {
+
+  background-color: rgba(21, 96, 21, 0.849);
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 15px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+
+
+
+
+.action{
+
+  margin-left: 60%;
+
+}
+
+
+
+.imgProf{
+
+  border-radius: 50%;
+
+  width:65px;
+
+  height: 66px;
+
+  margin-left: 40%;
+
+  margin-bottom: 7%;
+
+}
+
+
+.Imgprofil{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.upload {
+  width: 100px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.upload img {
+  border-radius: 50%;
+  border: 4px solid #2e2e2e;
+}
+
+.upload .round {
+  position: absolute;
+  bottom: 0;
+  background: #495057;
+  width: 32px;
+  height: 32px;
+  line-height: 33px;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #efe9ea;
+  margin-left: 80%;
+}
+
+.upload .round input[type="file"] {
+  position: absolute;
+  transform: scale(2);
+  opacity: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>NTT Appointments - Login</title>
+</head>
+<body>
+  <!--<h3>Gestion Temps de Travail</h3>-->
+    <section class="login">
+        <div class="login_box">
+            <div class="contact">
+                <form (ngSubmit)="handleLogin()">
+                    <img class="logo" src="assets/images/logo.png">
+                    <input type="text" id="username" placeholder="Email" name="email" [(ngModel)]="email" class="form-control" required>
+                    <input type="password" id="password" placeholder="Password" name="mdp" [(ngModel)]="mdp" class="form-control" required>
+                    <button class="submit">Log in</button>
+                    <a href="#">Forget password?</a>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

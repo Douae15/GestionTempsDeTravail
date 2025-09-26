@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Table 05</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <app-navbar></app-navbar>
+
+    <div class="animation-area">
+      <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <div class="title">
+      <h3>Plan de travail</h3>
+    </div>
+      <div class="tout" >
+        <div class="center" >
+          <p>Veuillez ajouter l'heure de début et de fin de travail:</p>
+          <form (ngSubmit)="modifierTemps()" class="row g-3">
+            <div class="container1" >
+              <div class="row">
+                <div class="col-md-4" >
+                  <label for="heureDebut" class="form-label"
+                    >Heure de début:</label
+                  >
+                  <input
+                   *ngIf="inseredHeureDebut == false"
+                    type="time"
+                    id="heureDebut"
+                    name="heureDebut"
+                    [(ngModel)]="heureDebut"
+                    required
+                    class="form-control"
+                  />
+                  <input
+                   *ngIf="inseredHeureDebut == true"
+                    type="time"
+                    id="heureDebut"
+                    name="heureDebut"
+                    [(ngModel)]="heureDebut"
+                    disabled
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="col-md-4" *ngIf="inseredHeureDebut == true">
+                  <label for="heureFin" class="form-label">Heure de fin:</label>
+                  <input
+                   *ngIf="inseredHeureFin==false"
+                    type="time"
+                    id="heureFin"
+                    name="heureFin"
+                    [(ngModel)]="heureFin"
+                    required
+                    class="form-control"
+                  />
+                  <input
+                   *ngIf="inseredHeureFin==true"
+                    type="time"
+                    id="heureFin"
+                    name="heureFin"
+                    [(ngModel)]="heureFin"
+                    disabled
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 offset-md-3" *ngIf="inseredHeureFin==false">
+                  <button class="btn">Ajouter</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!--<div class="flip-switch flip-switch-text ">
+        <input type="checkbox" id="c3" (click)="managePause()" />
+        <label for="c3"></label>
+      </div>-->
+      </div>
+
+      <div class="container">
+        <div id="app" (click)="togglePause()">
+          <div class="pause" [ngClass]="{ active: isPaused }">
+            <div class="line line_1"></div>
+            <div class="line line_2"></div>
+          </div>
+          <div class="play" [ngClass]="{ active: !isPaused }">
+            <div class="line line_1"></div>
+            <div class="line line_2"></div>
+            <div class="line line_3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-clock></app-clock>
+  </body>
+</html>

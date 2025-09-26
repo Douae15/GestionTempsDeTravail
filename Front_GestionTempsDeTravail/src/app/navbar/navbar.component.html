@@ -1,0 +1,53 @@
+<nav>
+  <div class="wrapper">
+    <div class="sidebar">
+      <img class="logo" src="assets/images/logo.png" />
+      <div class="userName">{{ user.user.nom }} {{ user.user.prenom }}</div>
+      <hr style="border: none; border-top: 3px solid #85baff" />
+      <ul>
+        <div class="admin">
+          <div class="home">
+            <li>
+              <a href="/home"
+                ><img class="icon" src="assets/images/home.png" />Home</a
+              >
+            </li>
+          </div>
+        </div>
+      </ul>
+      <div class="social_media">
+        <!-- <h3>Gestion de temps de travail</h3>-->
+      </div>
+    </div>
+
+    <div class="main_content">
+      <ul class="nav-links">
+        <li class="profil">
+          <a class="desktop-item"
+            ><img
+              class="Imgprofil"
+              src="assets/images/{{ user.user.photo }}"
+              onerror="this.src='assets/images/inconnu.png'; this.onerror=null;"
+          /></a>
+          <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+          <ul class="drop-menu">
+            <li>
+              <a (click)="openUserProfilePopup()"
+                ><img class="icon" src="assets/images/profil.png" />Profil</a
+              >
+            </li>
+            <hr />
+            <li>
+              <a (click)="handleLogout()"
+                ><img class="icon" src="assets/images/logout.png" /> Log out</a
+              >
+            </li>
+            <hr style="border: none; border-top: 2px solid #15389b" />
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

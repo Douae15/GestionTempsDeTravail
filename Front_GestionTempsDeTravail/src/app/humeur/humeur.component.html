@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humeur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Klee+One&family=Love+Ya+Like+A+Sister&family=Montserrat+Alternates&family=Nerko+One&family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,500;6..12,600;6..12,800&family=Pacifico&family=Poppins:ital,wght@0,200;1,300&family=Unbounded:wght@200&family=Vast+Shadow&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container2">
+        <div class="titre2" *ngIf="tokenStatut !== 'Token valide'">
+        <div class="titre2" *ngIf="message" >
+            <p>{{ message }}</p>
+        </div>
+    </div>
+    </div>
+    
+    <div class="container">
+        
+    
+    
+        <div class="titre" *ngIf="tokenStatut == 'Token valide'">
+            <h3>Votre bien-être, notre priorité !</h3>
+            <p>Cher employé, nous accordons une grande importance au bien-être de vous.<br>
+            Votre humeur aujourd'hui est essentielle pour nous, car vos retours nous permettent d'apporter des 
+            améliorations à notre milieu de travail. Nous vous encourageons donc à partager en toute 
+            confidentialité comment vous vous sentez émotionnellement.
+           </p>
+        </div>
+        
+            
+    <form (ngSubmit)="ajouterHumeur()" *ngIf="tokenStatut === 'Token valide'">
+    
+        <div class ="humeur">
+            <div id="message" *ngIf="error" class="message" style="color:red;">{{ error }}</div>
+        <label >
+            <input type="radio"   name="emoji" value="normal" [(ngModel)]="selectedHumeur" class="emoji-radio">
+            <div class="emoji  emoji--normal">
+                <div class="emoji__face">
+                    <div class="emoji__eyebrows"></div>
+                    <div class="emoji__eyes"></div>
+                    <div class="emoji__mouth"></div>
+                </div>
+            </div>
+        </label>
+    
+        <label>
+            <input type="radio" name="emoji" value="heureux"  [(ngModel)]="selectedHumeur" class="emoji-radio">
+            <div class="emoji  emoji--heureux">
+                <div class="emoji__face">
+                    <div class="emoji__eyes"></div>
+                    <div class="emoji__mouth">
+                        <div class="emoji__tongue"></div>
+                    </div>
+                </div>
+            </div>
+        </label>
+    
+        <label>
+            <input type="radio" name="emoji" value="excite" [(ngModel)]="selectedHumeur" class="emoji-radio">
+            <div class="emoji  emoji--excite">
+                <div class="emoji__face">
+                    <div class="emoji__eyebrows"></div>
+                    <div class="emoji__mouth"></div>
+                </div>
+            </div>
+        </label>
+    
+        <label>
+            <input type="radio" name="emoji" value="Confus" [(ngModel)]="selectedHumeur" class="emoji-radio">
+            <div class="emoji emoji--Confus">
+                <div class="emoji__face">
+                    <div class="emoji__eyebrows"></div>
+                    <div class="emoji__eyes"></div>
+                    <div class="emoji__mouth"></div>
+                </div>
+            </div>
+        </label>
+    
+        <label>
+            <input type="radio" name="emoji" value="sad" [(ngModel)]="selectedHumeur" class="emoji-radio">
+            <div class="emoji  emoji--sad">
+                <div class="emoji__face">
+                    <div class="emoji__eyebrows"></div>
+                    <div class="emoji__eyes"></div>
+                    <div class="emoji__mouth"></div>
+                </div>
+            </div>
+        </label>
+    
+        <label>
+            <input type="radio" name="emoji" value="angry" [(ngModel)]="selectedHumeur" class="emoji-radio">
+            <div class="emoji  emoji--angry">
+                <div class="emoji__face">
+                    <div class="emoji__eyebrows"></div>
+                    <div class="emoji__eyes"></div>
+                    <div class="emoji__mouth"></div>
+                </div>
+            </div>
+        </label>
+    </div>
+    <!--        <button class="button" type="submit">Envoyer</button>
+-->
+<button class="selectnone" onclick="setTimeout( 2500);">
+    <span>Submit</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
+    </svg>
+  </button></form>
+    
+    </div>
+    <div class="wrapper">
+		<span>&#128512;</span>
+		<span>&#128513;</span>
+		<span>&#128514;</span>
+		<span>&#128515;</span>
+		<span>&#128516;</span>
+		<span>&#128517;</span>
+		<span>&#128518;</span>
+		<span>&#128519;</span>
+		<span>&#128520;</span>
+		<span>&#128521;</span>
+</div>
+
+</body>
+</html>

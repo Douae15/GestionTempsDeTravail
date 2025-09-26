@@ -1,0 +1,42 @@
+
+<div class="form-container">
+  <h1>{{ nom }} {{ prenom }}</h1>
+
+  
+<h3>Veuillez sélectionner une semaine :</h3>
+<div class="duree">
+De :
+  <select class="de" [(ngModel)]="selectedWeekStartDate" >
+    <option *ngFor="let rapport of rapports" [value]="rapport.idRapport">
+      {{ formatCustomDate(getStartOfWeek(rapport.date)) }}
+    </option>
+  </select>
+
+A :
+  <select [(ngModel)]="selectedWeekStartDate" disabled="disabled">
+    <ng-container *ngFor="let rapport of rapports">
+      <ng-container *ngIf="rapport.idRapport == selectedWeekStartDate">
+        <option [value]="rapport.idRapport">
+           {{ formatCustomDate(subtractDayFromDate(rapport.date)) }}
+        </option>
+      </ng-container>
+    </ng-container>
+  </select>
+</div>
+
+<div class="button-container">
+    <div class="rapport" *ngFor="let rapport of rapports">
+      <button *ngIf="rapport.idRapport == selectedWeekStartDate">
+        <a [href]="rapport.path" target="_blank">Cliquez ici pour ouvrir le PDF</a>
+      </button>
+    </div>
+    <button class="close" (click)="closepopup()">Close</button>
+  </div>
+  
+  
+</div>
+  
+  
+  
+  
+  

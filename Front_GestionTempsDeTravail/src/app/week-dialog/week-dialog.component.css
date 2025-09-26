@@ -1,0 +1,149 @@
+
+  
+  .form-container {
+    background-color: #e6e8f6;
+    
+    border-radius: 5px;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  
+    border: 2px solid #004AAD;
+    height:'350px'
+   
+  }
+
+
+  h1 {
+    color: #004AAD;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  
+  select{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 50px;
+    
+  }
+
+  option{
+    height:30px;
+  }
+   h3{
+    margin-top: 50px;
+    margin-left: 10px;
+   }
+  .duree{
+    margin-left: 10px;
+    
+  }
+
+  .de{
+    margin-right: 10px;
+  }
+
+
+ 
+  a{
+    text-decoration: none;
+    color:#fff;
+  }
+
+  
+  
+
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 30px;
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+      
+      
+  }
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style pour le bouton "Close" */
+  .close {
+    background-color: #55608f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.803);
+        
+      }
+  
+  .close:hover {
+    background-color: #4b5496;
+  }
+  
+  
+  
+  
+  
+  
+  
+  button {
+  
+    background-color: rgba(21, 96, 21, 0.849);
+  
+    color: white;
+  
+    border: none;
+  
+    padding: 10px 15px;
+  
+    border-radius: 3px;
+  
+    cursor: pointer;
+  
+  }
+
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    
+  }
+
+
+select.de option {
+  background-color: #e5e5e5;
+  color: #333; 
+  font-size: 16px;
+  padding: 50px 10px;
+  height:500px; 
+}
+
+select[disabled] option {
+  background-color: #ccc; 
+  color: #999; 
+}
+
+
